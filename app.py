@@ -10,7 +10,7 @@ piadas = ["Porque é que os polícias não gostam de sabão? Porque  eles prefer
 def index():
     return "Hello World!"
 
-    @app.route("/piada")
+@app.route("/piada")
 def piada():
     return randow.choice(piadas)
 

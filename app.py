@@ -1,4 +1,4 @@
-from flask import flask
+from flask import Flask
 import randow
 
 app= Flask(_name_)

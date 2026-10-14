@@ -1,5 +1,5 @@
 from flask import Flask
-import randow
+import random
 
 app= Flask(_name_)
 
@@ -12,7 +12,7 @@ def index():
 
 @app.route("/piada")
 def piada():
-    return randow.choice(piadas)
+    return random.choice(piadas)
 
 @app.route("/piada/<int:id>" , methods=["GET"])
 def piada_id(id):

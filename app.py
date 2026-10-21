@@ -7,15 +7,14 @@ app = Flask(__name__)
 pokemons = [
     {
         "id": 1,
-        "nome": "Squirtle"
+        "nome": "Squirtle",
         "tipo": "Água"
     
     },
         {
         "id": 2,
-        "nome": "Bulbasaur"
+        "nome": "Bulbasaur",
         "tipo": "Planta e Veneno "
-    
     },
 ]
 

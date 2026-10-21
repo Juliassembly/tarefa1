@@ -1,8 +1,10 @@
 import random
 from flask import Flask
+from flask_cors import CORS  
 
-# Correção: O correto é usar dois underscores antes e depois (__name__)
+# Correção: O correto é usar dois underscores a__name__ntes e depois ()
 app = Flask(__name__)
+CORS(app)
 
 pokemons = [
     {
@@ -40,6 +42,7 @@ def pokémon_id(id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8083) 
+
 
 
 

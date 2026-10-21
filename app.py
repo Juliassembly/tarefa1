@@ -6,6 +6,18 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+from flask import Flask, jsonify
+
+visitas = 0  # Inicializa a variável global
+
+@app.route("/")
+def index():
+    global visitas  # Permite modificar a variável global dentro da função
+    visitas = visitas + 1
+    return jsonify({"visitas": visitas})  # Passa um dicionário Python real
+
+
+
 pokemons = [
     {
         "id": 1,
@@ -21,10 +33,6 @@ pokemons = [
 ]
 
 
-
-@app.route("/")
-def index():
-    return "Hello World!"
 
 
 @app.route("/pokémon")
